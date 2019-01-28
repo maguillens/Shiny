@@ -20,7 +20,7 @@ dataAFP <- read.csv("./AFP.csv", header = TRUE, sep = ";")
 fluidPage(     
   
   # Give the page a title 
-  titlePanel("AFP Peru 2018"), 
+  titlePanel("AFP (Administrators of Pension Funds) Peru 2018"), 
   
   # Generate a row with a sidebar 
   sidebarLayout(       
@@ -28,7 +28,7 @@ fluidPage(
     
     # Define the sidebar with one input 
     sidebarPanel(p(strong("Documentation:",style="color:blue"),a("AFP Data",href="http://www.bcrp.gob.pe/estadisticas/cuadros-de-la-nota-semanal.html")), 
-                 selectInput("AFP", "AFP:",  
+                 selectInput("AFP", "AFP - Information in percentage points:",  
                              choices=colnames(dataAFP)), 
                  hr(), 
                  helpText("Retability per month - 2018") 
